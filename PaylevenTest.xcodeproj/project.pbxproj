@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D798E9B9192B45C500BC8CF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9B8192B45C500BC8CF8 /* Foundation.framework */; };
+		D798E9BB192B45C500BC8CF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9BA192B45C500BC8CF8 /* CoreGraphics.framework */; };
+		D798E9BD192B45C500BC8CF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9BC192B45C500BC8CF8 /* UIKit.framework */; };
+		D798E9C3192B45C500BC8CF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D798E9C1192B45C500BC8CF8 /* InfoPlist.strings */; };
+		D798E9C5192B45C500BC8CF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798E9C4192B45C500BC8CF8 /* main.m */; };
+		D798E9C9192B45C500BC8CF8 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D798E9C8192B45C500BC8CF8 /* PLAppDelegate.m */; };
+		D798E9CB192B45C500BC8CF8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D798E9CA192B45C500BC8CF8 /* Images.xcassets */; };
+		D798E9D2192B45C500BC8CF8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9D1192B45C500BC8CF8 /* XCTest.framework */; };
+		D798E9D3192B45C500BC8CF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9B8192B45C500BC8CF8 /* Foundation.framework */; };
+		D798E9D4192B45C500BC8CF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9BC192B45C500BC8CF8 /* UIKit.framework */; };
+		D798E9DC192B45C500BC8CF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D798E9DA192B45C500BC8CF8 /* InfoPlist.strings */; };
+		D798E9DE192B45C500BC8CF8 /* PaylevenTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D798E9DD192B45C500BC8CF8 /* PaylevenTestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D798E9D5192B45C500BC8CF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D798E9AD192B45C500BC8CF8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D798E9B4192B45C500BC8CF8;
+			remoteInfo = PaylevenTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D798E9B5192B45C500BC8CF8 /* PaylevenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaylevenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D798E9B8192B45C500BC8CF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D798E9BA192B45C500BC8CF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D798E9BC192B45C500BC8CF8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D798E9C0192B45C500BC8CF8 /* PaylevenTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaylevenTest-Info.plist"; sourceTree = "<group>"; };
+		D798E9C2192B45C500BC8CF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D798E9C4192B45C500BC8CF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D798E9C6192B45C500BC8CF8 /* PaylevenTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaylevenTest-Prefix.pch"; sourceTree = "<group>"; };
+		D798E9C7192B45C500BC8CF8 /* PLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAppDelegate.h; sourceTree = "<group>"; };
+		D798E9C8192B45C500BC8CF8 /* PLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAppDelegate.m; sourceTree = "<group>"; };
+		D798E9CA192B45C500BC8CF8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D798E9D0192B45C500BC8CF8 /* PaylevenTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaylevenTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D798E9D1192B45C500BC8CF8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D798E9D9192B45C500BC8CF8 /* PaylevenTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaylevenTestTests-Info.plist"; sourceTree = "<group>"; };
+		D798E9DB192B45C500BC8CF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D798E9DD192B45C500BC8CF8 /* PaylevenTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaylevenTestTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D798E9B2192B45C500BC8CF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D798E9BB192B45C500BC8CF8 /* CoreGraphics.framework in Frameworks */,
+				D798E9BD192B45C500BC8CF8 /* UIKit.framework in Frameworks */,
+				D798E9B9192B45C500BC8CF8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D798E9CD192B45C500BC8CF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D798E9D2192B45C500BC8CF8 /* XCTest.framework in Frameworks */,
+				D798E9D4192B45C500BC8CF8 /* UIKit.framework in Frameworks */,
+				D798E9D3192B45C500BC8CF8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D798E9AC192B45C500BC8CF8 = {
+			isa = PBXGroup;
+			children = (
+				D798E9BE192B45C500BC8CF8 /* PaylevenTest */,
+				D798E9D7192B45C500BC8CF8 /* PaylevenTestTests */,
+				D798E9B7192B45C500BC8CF8 /* Frameworks */,
+				D798E9B6192B45C500BC8CF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D798E9B6192B45C500BC8CF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D798E9B5192B45C500BC8CF8 /* PaylevenTest.app */,
+				D798E9D0192B45C500BC8CF8 /* PaylevenTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D798E9B7192B45C500BC8CF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D798E9B8192B45C500BC8CF8 /* Foundation.framework */,
+				D798E9BA192B45C500BC8CF8 /* CoreGraphics.framework */,
+				D798E9BC192B45C500BC8CF8 /* UIKit.framework */,
+				D798E9D1192B45C500BC8CF8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D798E9BE192B45C500BC8CF8 /* PaylevenTest */ = {
+			isa = PBXGroup;
+			children = (
+				D798E9C7192B45C500BC8CF8 /* PLAppDelegate.h */,
+				D798E9C8192B45C500BC8CF8 /* PLAppDelegate.m */,
+				D798E9CA192B45C500BC8CF8 /* Images.xcassets */,
+				D798E9BF192B45C500BC8CF8 /* Supporting Files */,
+			);
+			path = PaylevenTest;
+			sourceTree = "<group>";
+		};
+		D798E9BF192B45C500BC8CF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D798E9C0192B45C500BC8CF8 /* PaylevenTest-Info.plist */,
+				D798E9C1192B45C500BC8CF8 /* InfoPlist.strings */,
+				D798E9C4192B45C500BC8CF8 /* main.m */,
+				D798E9C6192B45C500BC8CF8 /* PaylevenTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D798E9D7192B45C500BC8CF8 /* PaylevenTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				D798E9DD192B45C500BC8CF8 /* PaylevenTestTests.m */,
+				D798E9D8192B45C500BC8CF8 /* Supporting Files */,
+			);
+			path = PaylevenTestTests;
+			sourceTree = "<group>";
+		};
+		D798E9D8192B45C500BC8CF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D798E9D9192B45C500BC8CF8 /* PaylevenTestTests-Info.plist */,
+				D798E9DA192B45C500BC8CF8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D798E9B4192B45C500BC8CF8 /* PaylevenTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D798E9E1192B45C500BC8CF8 /* Build configuration list for PBXNativeTarget "PaylevenTest" */;
+			buildPhases = (
+				D798E9B1192B45C500BC8CF8 /* Sources */,
+				D798E9B2192B45C500BC8CF8 /* Frameworks */,
+				D798E9B3192B45C500BC8CF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PaylevenTest;
+			productName = PaylevenTest;
+			productReference = D798E9B5192B45C500BC8CF8 /* PaylevenTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D798E9CF192B45C500BC8CF8 /* PaylevenTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D798E9E4192B45C500BC8CF8 /* Build configuration list for PBXNativeTarget "PaylevenTestTests" */;
+			buildPhases = (
+				D798E9CC192B45C500BC8CF8 /* Sources */,
+				D798E9CD192B45C500BC8CF8 /* Frameworks */,
+				D798E9CE192B45C500BC8CF8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D798E9D6192B45C500BC8CF8 /* PBXTargetDependency */,
+			);
+			name = PaylevenTestTests;
+			productName = PaylevenTestTests;
+			productReference = D798E9D0192B45C500BC8CF8 /* PaylevenTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D798E9AD192B45C500BC8CF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = PL;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = dev;
+				TargetAttributes = {
+					D798E9CF192B45C500BC8CF8 = {
+						TestTargetID = D798E9B4192B45C500BC8CF8;
+					};
+				};
+			};
+			buildConfigurationList = D798E9B0192B45C500BC8CF8 /* Build configuration list for PBXProject "PaylevenTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D798E9AC192B45C500BC8CF8;
+			productRefGroup = D798E9B6192B45C500BC8CF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D798E9B4192B45C500BC8CF8 /* PaylevenTest */,
+				D798E9CF192B45C500BC8CF8 /* PaylevenTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D798E9B3192B45C500BC8CF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D798E9C3192B45C500BC8CF8 /* InfoPlist.strings in Resources */,
+				D798E9CB192B45C500BC8CF8 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D798E9CE192B45C500BC8CF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D798E9DC192B45C500BC8CF8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D798E9B1192B45C500BC8CF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D798E9C9192B45C500BC8CF8 /* PLAppDelegate.m in Sources */,
+				D798E9C5192B45C500BC8CF8 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D798E9CC192B45C500BC8CF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D798E9DE192B45C500BC8CF8 /* PaylevenTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D798E9D6192B45C500BC8CF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D798E9B4192B45C500BC8CF8 /* PaylevenTest */;
+			targetProxy = D798E9D5192B45C500BC8CF8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D798E9C1192B45C500BC8CF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D798E9C2192B45C500BC8CF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D798E9DA192B45C500BC8CF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D798E9DB192B45C500BC8CF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D798E9DF192B45C500BC8CF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D798E9E0192B45C500BC8CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D798E9E2192B45C500BC8CF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaylevenTest/PaylevenTest-Prefix.pch";
+				INFOPLIST_FILE = "PaylevenTest/PaylevenTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D798E9E3192B45C500BC8CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaylevenTest/PaylevenTest-Prefix.pch";
+				INFOPLIST_FILE = "PaylevenTest/PaylevenTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D798E9E5192B45C500BC8CF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PaylevenTest.app/PaylevenTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaylevenTest/PaylevenTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PaylevenTestTests/PaylevenTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D798E9E6192B45C500BC8CF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PaylevenTest.app/PaylevenTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PaylevenTest/PaylevenTest-Prefix.pch";
+				INFOPLIST_FILE = "PaylevenTestTests/PaylevenTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D798E9B0192B45C500BC8CF8 /* Build configuration list for PBXProject "PaylevenTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D798E9DF192B45C500BC8CF8 /* Debug */,
+				D798E9E0192B45C500BC8CF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D798E9E1192B45C500BC8CF8 /* Build configuration list for PBXNativeTarget "PaylevenTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D798E9E2192B45C500BC8CF8 /* Debug */,
+				D798E9E3192B45C500BC8CF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D798E9E4192B45C500BC8CF8 /* Build configuration list for PBXNativeTarget "PaylevenTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D798E9E5192B45C500BC8CF8 /* Debug */,
+				D798E9E6192B45C500BC8CF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D798E9AD192B45C500BC8CF8 /* Project object */;
+}
