@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18415863F96A796DDDB0C003 /* PLListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18415FA77F7BECB1348B288B /* PLListViewController.m */; };
+		19A177C285FE5E433FF40051 /* PLFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17A9ED2170E6961C01DB2 /* PLFile.m */; };
+		19A17A564F9995AA8E5D7CF1 /* PLFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17E645D5C2CCD457344FF /* PLFileManager.m */; };
+		40B7A6400A5C4C3C8E618C33 /* libPods-PaylevenTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB469160E62A44EC9924899D /* libPods-PaylevenTest.a */; };
 		D798E9B9192B45C500BC8CF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9B8192B45C500BC8CF8 /* Foundation.framework */; };
 		D798E9BB192B45C500BC8CF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9BA192B45C500BC8CF8 /* CoreGraphics.framework */; };
 		D798E9BD192B45C500BC8CF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9BC192B45C500BC8CF8 /* UIKit.framework */; };
@@ -32,6 +36,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184153EE851DC684C83EE3E5 /* PLListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLListViewController.h; sourceTree = "<group>"; };
+		18415FA77F7BECB1348B288B /* PLListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLListViewController.m; sourceTree = "<group>"; };
+		18415FFEEFA62AD6F85037C0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		19A1761A9BE2B607F1769296 /* PLFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFile.h; sourceTree = "<group>"; };
+		19A17A9ED2170E6961C01DB2 /* PLFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFile.m; sourceTree = "<group>"; };
+		19A17E645D5C2CCD457344FF /* PLFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFileManager.m; sourceTree = "<group>"; };
+		19A17E657A64CE87776029C9 /* PLFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFileManager.h; sourceTree = "<group>"; };
+		D054F74517474279B195AB67 /* Pods-PaylevenTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylevenTest.xcconfig"; path = "Pods/Pods-PaylevenTest.xcconfig"; sourceTree = "<group>"; };
 		D798E9B5192B45C500BC8CF8 /* PaylevenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaylevenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798E9B8192B45C500BC8CF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D798E9BA192B45C500BC8CF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +60,7 @@
 		D798E9D9192B45C500BC8CF8 /* PaylevenTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaylevenTestTests-Info.plist"; sourceTree = "<group>"; };
 		D798E9DB192B45C500BC8CF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D798E9DD192B45C500BC8CF8 /* PaylevenTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaylevenTestTests.m; sourceTree = "<group>"; };
+		EB469160E62A44EC9924899D /* libPods-PaylevenTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaylevenTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 				D798E9BB192B45C500BC8CF8 /* CoreGraphics.framework in Frameworks */,
 				D798E9BD192B45C500BC8CF8 /* UIKit.framework in Frameworks */,
 				D798E9B9192B45C500BC8CF8 /* Foundation.framework in Frameworks */,
+				40B7A6400A5C4C3C8E618C33 /* libPods-PaylevenTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +88,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18415075092A75EF4C06CA6B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18415FA77F7BECB1348B288B /* PLListViewController.m */,
+				184153EE851DC684C83EE3E5 /* PLListViewController.h */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		184151A46A0FAB2EC9E9B5F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		184152C1A0F72C28A3788C8E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		184155F97A7D347A5A2DAAE0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19A17A9ED2170E6961C01DB2 /* PLFile.m */,
+				19A1761A9BE2B607F1769296 /* PLFile.h */,
+				19A17E645D5C2CCD457344FF /* PLFileManager.m */,
+				19A17E657A64CE87776029C9 /* PLFileManager.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18415F581B18CC1BBC2B07D3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				18415075092A75EF4C06CA6B /* Controllers */,
+				184155F97A7D347A5A2DAAE0 /* Model */,
+				184151A46A0FAB2EC9E9B5F3 /* Views */,
+				184152C1A0F72C28A3788C8E /* Network */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		D798E9AC192B45C500BC8CF8 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +140,8 @@
 				D798E9D7192B45C500BC8CF8 /* PaylevenTestTests */,
 				D798E9B7192B45C500BC8CF8 /* Frameworks */,
 				D798E9B6192B45C500BC8CF8 /* Products */,
+				18415FFEEFA62AD6F85037C0 /* Podfile */,
+				D054F74517474279B195AB67 /* Pods-PaylevenTest.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +161,7 @@
 				D798E9BA192B45C500BC8CF8 /* CoreGraphics.framework */,
 				D798E9BC192B45C500BC8CF8 /* UIKit.framework */,
 				D798E9D1192B45C500BC8CF8 /* XCTest.framework */,
+				EB469160E62A44EC9924899D /* libPods-PaylevenTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,6 +173,7 @@
 				D798E9C8192B45C500BC8CF8 /* PLAppDelegate.m */,
 				D798E9CA192B45C500BC8CF8 /* Images.xcassets */,
 				D798E9BF192B45C500BC8CF8 /* Supporting Files */,
+				18415F581B18CC1BBC2B07D3 /* Sources */,
 			);
 			path = PaylevenTest;
 			sourceTree = "<group>";
@@ -151,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D798E9E1192B45C500BC8CF8 /* Build configuration list for PBXNativeTarget "PaylevenTest" */;
 			buildPhases = (
+				C4FEA340978549E99799D94A /* Check Pods Manifest.lock */,
 				D798E9B1192B45C500BC8CF8 /* Sources */,
 				D798E9B2192B45C500BC8CF8 /* Frameworks */,
 				D798E9B3192B45C500BC8CF8 /* Resources */,
+				DB27E8C0B70A46018340249E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,6 +300,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C4FEA340978549E99799D94A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB27E8C0B70A46018340249E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-PaylevenTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D798E9B1192B45C500BC8CF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -242,6 +340,9 @@
 			files = (
 				D798E9C9192B45C500BC8CF8 /* PLAppDelegate.m in Sources */,
 				D798E9C5192B45C500BC8CF8 /* main.m in Sources */,
+				18415863F96A796DDDB0C003 /* PLListViewController.m in Sources */,
+				19A177C285FE5E433FF40051 /* PLFile.m in Sources */,
+				19A17A564F9995AA8E5D7CF1 /* PLFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,12 +456,21 @@
 		};
 		D798E9E2192B45C500BC8CF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D054F74517474279B195AB67 /* Pods-PaylevenTest.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaylevenTest/3rdParty/BoxSDK/vendor/OSX/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaylevenTest/PaylevenTest-Prefix.pch";
 				INFOPLIST_FILE = "PaylevenTest/PaylevenTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaylevenTest/3rdParty/BoxSDK/vendor/iOS/lib/OCMock",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -368,12 +478,21 @@
 		};
 		D798E9E3192B45C500BC8CF8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D054F74517474279B195AB67 /* Pods-PaylevenTest.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaylevenTest/3rdParty/BoxSDK/vendor/OSX/Frameworks",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaylevenTest/PaylevenTest-Prefix.pch";
 				INFOPLIST_FILE = "PaylevenTest/PaylevenTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PaylevenTest/3rdParty/BoxSDK/vendor/iOS/lib/OCMock",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -438,6 +557,7 @@
 				D798E9E3192B45C500BC8CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D798E9E4192B45C500BC8CF8 /* Build configuration list for PBXNativeTarget "PaylevenTestTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +566,7 @@
 				D798E9E6192B45C500BC8CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
