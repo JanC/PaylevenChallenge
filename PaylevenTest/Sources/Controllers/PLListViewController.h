@@ -5,9 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class PLFile;
 
-@interface PLListViewController : UIViewController
+@interface PLListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-
+-(id) initWithRootFolder;
+-(id) initWithFolder:(PLFile *) folder;
 
 @end

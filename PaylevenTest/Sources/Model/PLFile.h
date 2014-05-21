@@ -9,6 +9,6 @@
 
 @property (nonatomic, strong, readwrite) NSString *uid;
 @property (nonatomic, strong, readwrite) NSString *name;
-@property (nonatomic, assign, readwrite, getter=isDirectory) NSString *directory;
+@property (nonatomic, assign, readwrite, getter=isDirectory) BOOL directory;
 
 @end

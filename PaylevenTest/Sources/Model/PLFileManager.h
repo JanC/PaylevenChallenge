@@ -5,11 +5,15 @@
 
 #import <Foundation/Foundation.h>
 
-@class PLFile;
 
-typedef void (^PLFileManagerListCompletionBlock)(NSArray *files, NSError *error);
+@class PLFile;
+@class PLBoxAPIClient;
+
+typedef void (^PLFileManagerListCompletionBlock)(NSArray *plFiles, NSError *error);
 
 @interface PLFileManager : NSObject
+
++ (id)sharedManager;
 
 -(void) listFilesInFolder:(PLFile *) folder completion:(PLFileManagerListCompletionBlock) completion;
 @end

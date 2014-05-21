@@ -10,6 +10,7 @@
 #import "BoxSDK.h"
 #import "PLListViewController.h"
 
+
 @implementation PLAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -19,13 +20,13 @@
 
 
 
-    [BoxSDK sharedSDK].OAuth2Session.clientID = @"4mbuasc2uvrdle4ixc6ul0wf5du281wl";
-    [BoxSDK sharedSDK].OAuth2Session.clientSecret = @"1Z7JVxABYMScyjqzgjF4BJaG86WYGFTv";
+//    [BoxSDK sharedSDK].OAuth2Session.clientID = @"4mbuasc2uvrdle4ixc6ul0wf5du281wl";
+//    [BoxSDK sharedSDK].OAuth2Session.clientSecret = @"1Z7JVxABYMScyjqzgjF4BJaG86WYGFTv";
     //[BoxSDK sharedSDK].OAuth2Session.
 
 
 
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[PLListViewController alloc] init]];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[PLListViewController alloc] initWithRootFolder]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
