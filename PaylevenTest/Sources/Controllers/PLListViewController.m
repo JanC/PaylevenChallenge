@@ -11,6 +11,7 @@
 #import "NSDateFormatter+PLFormat.h"
 #import "PLListArrayDataSource.h"
 #import "UIColor+PLStyle.h"
+#import "PLFileTableViewCell+PLConfigureForFile.h"
 
 NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
 
@@ -63,11 +64,12 @@ NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
     self.dataSource = [[PLListArrayDataSource alloc] initWithTableView:self.tableView
                                                        reuseIdentifier:PLListViewControllerCellId
                                                              cellClass:[PLFileTableViewCell class] configureCellBlock:^(UITableViewCell *cell, id modelObject) {
-        PLFile *file = modelObject;
-        cell.textLabel.text = file.name;
 
-        NSString *creationDateString = [[NSDateFormatter PLUIDateFormatter] stringFromDate:file.creationDate];
-        cell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Created at %@", ), creationDateString];
+        NSAssert([cell isKindOfClass:[PLFileTableViewCell class]], @"The data source must dequeue a %@ cell", NSStringFromClass([PLFileTableViewCell class]));
+        NSAssert([modelObject isKindOfClass:[PLFile class]], @"The model object must be  %@", NSStringFromClass([PLFile class]));
+
+        PLFileTableViewCell *fileTableViewCell = (PLFileTableViewCell *)cell;
+        [fileTableViewCell configureForFile:modelObject];
     }];
     self.tableView.dataSource = self.dataSource;
 

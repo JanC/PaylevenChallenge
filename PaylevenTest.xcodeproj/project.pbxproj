@@ -31,6 +31,7 @@
 		D91FC146875D9DD0165B8613 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D91FC9093C5A43929FF568B4 /* Images.xcassets */; };
 		D91FC3F612DB646F1157CBE4 /* NSDateFormatter+PLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FCD8A2C6918DCF375FBA3 /* NSDateFormatter+PLFormat.m */; };
 		D91FC444D76C2CE199D5A3F9 /* PLJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FC3EFCB6FB544E0418350 /* PLJSONParser.m */; };
+		D91FC555AEFDDBCB4019A7CB /* PLFileTableViewCell+PLConfigureForFile.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FC83AA6030775389A42B0 /* PLFileTableViewCell+PLConfigureForFile.m */; };
 		D91FC5C811FE0DA9B50159F9 /* PLListArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FC11D41C5FE4C432D16D7 /* PLListArrayDataSource.m */; };
 		D91FC6D87E28F94B8C6BE06F /* PLBoxAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FC49F54C8CC74A4AA1180 /* PLBoxAPIClient.m */; };
 		D91FCC0FB5B78FBA0B508C4E /* NSURL+PLURL.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FC264B7759DACEE237A16 /* NSURL+PLURL.m */; };
@@ -89,6 +90,7 @@
 		D91FC497E6FCC98C623C860D /* PLFile+PLBoxFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PLFile+PLBoxFile.h"; sourceTree = "<group>"; };
 		D91FC49F54C8CC74A4AA1180 /* PLBoxAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLBoxAPIClient.m; sourceTree = "<group>"; };
 		D91FC53DEAB59F1D01F55815 /* NSError+PLError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSError+PLError.m"; sourceTree = "<group>"; };
+		D91FC83AA6030775389A42B0 /* PLFileTableViewCell+PLConfigureForFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PLFileTableViewCell+PLConfigureForFile.m"; sourceTree = "<group>"; };
 		D91FC846690A89A75FEECB59 /* NSDateFormatter+PLFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+PLFormat.h"; sourceTree = "<group>"; };
 		D91FC9093C5A43929FF568B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D91FC9EB722CDDFC01DED064 /* NSURL+PLURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+PLURL.h"; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		D91FCD8A2C6918DCF375FBA3 /* NSDateFormatter+PLFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+PLFormat.m"; sourceTree = "<group>"; };
 		D91FCDA9CD32B89ECE7A4433 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		D91FCDD7A95A3C60C922F88C /* PLBoxAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLBoxAPIClient.h; sourceTree = "<group>"; };
+		D91FCEB036EB2CC45917AC8C /* PLFileTableViewCell+PLConfigureForFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PLFileTableViewCell+PLConfigureForFile.h"; sourceTree = "<group>"; };
 		D91FCF4B9A16156308E91FB7 /* PLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLParser.h; sourceTree = "<group>"; };
 		EB469160E62A44EC9924899D /* libPods-PaylevenTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PaylevenTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -184,6 +187,8 @@
 			children = (
 				19A1725FC3F6C1868395E5D5 /* PLFileTableViewCell.m */,
 				19A17A2A9A81F13EA5E3586D /* PLFileTableViewCell.h */,
+				D91FC83AA6030775389A42B0 /* PLFileTableViewCell+PLConfigureForFile.m */,
+				D91FCEB036EB2CC45917AC8C /* PLFileTableViewCell+PLConfigureForFile.h */,
 			);
 			path = "TableView Cells";
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				D91FCC0FB5B78FBA0B508C4E /* NSURL+PLURL.m in Sources */,
 				D91FC3F612DB646F1157CBE4 /* NSDateFormatter+PLFormat.m in Sources */,
 				D91FC5C811FE0DA9B50159F9 /* PLListArrayDataSource.m in Sources */,
+				D91FC555AEFDDBCB4019A7CB /* PLFileTableViewCell+PLConfigureForFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
