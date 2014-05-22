@@ -7,9 +7,11 @@
 //
 
 #import "PLAppDelegate.h"
-#import "BoxSDK.h"
 #import "PLListViewController.h"
+#import "UIColor+PLStyle.h"
 
+@interface PLAppDelegate () <BoxAuthorizationViewControllerDelegate>
+@end
 
 @implementation PLAppDelegate
 
@@ -19,18 +21,36 @@
     // Override point for customization after application launch.
 
 
+    [self customizeAppearance];
 
-//    [BoxSDK sharedSDK].OAuth2Session.clientID = @"4mbuasc2uvrdle4ixc6ul0wf5du281wl";
-//    [BoxSDK sharedSDK].OAuth2Session.clientSecret = @"1Z7JVxABYMScyjqzgjF4BJaG86WYGFTv";
-    //[BoxSDK sharedSDK].OAuth2Session.
+    [BoxSDK sharedSDK].OAuth2Session.clientID = @"4mbuasc2uvrdle4ixc6ul0wf5du281wl";
+    [BoxSDK sharedSDK].OAuth2Session.clientSecret = @"1Z7JVxABYMScyjqzgjF4BJaG86WYGFTv";
+
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(boxAPITokensDidRefresh:)
+                                                 name:BoxOAuth2SessionDidBecomeAuthenticatedNotification
+                                               object:[BoxSDK sharedSDK].OAuth2Session];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(boxAPITokensDidRefresh:)
+                                                 name:BoxOAuth2SessionDidRefreshTokensNotification
+                                               object:[BoxSDK sharedSDK].OAuth2Session];
+
+
+    NSURL *authorizationURL = [BoxSDK sharedSDK].OAuth2Session.authorizeURL;
+    NSString *redirectURI = [BoxSDK sharedSDK].OAuth2Session.redirectURIString;
+    BoxAuthorizationViewController *authorizationViewController = [[BoxAuthorizationViewController alloc] initWithAuthorizationURL:authorizationURL redirectURI:redirectURI];
+    authorizationViewController.delegate = self;
+
+
+    self.window.rootViewController = authorizationViewController;
 
 
 
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[PLListViewController alloc] initWithRootFolder]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -40,7 +60,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -57,6 +77,41 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - BoxOAuth2 Notifications
+
+- (void)boxAPITokensDidRefresh:(id)sender
+{
+
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[PLListViewController alloc] initWithRootFolder]];
+}
+
+- (void)authorizationViewControllerDidStartLoading:(BoxAuthorizationViewController *)authorizationViewController
+{
+}
+
+- (void)authorizationViewControllerDidFinishLoading:(BoxAuthorizationViewController *)authorizationViewController
+{
+}
+
+- (void)authorizationViewControllerDidCancel:(BoxAuthorizationViewController *)authorizationViewController
+{
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [[PLListViewController alloc] initWithRootFolder]];
+}
+
+- (BOOL)authorizationViewController:(BoxAuthorizationViewController *)authorizationViewController shouldLoadReceivedOAuth2RedirectRequest:(NSURLRequest *)request
+{
+    [[BoxSDK sharedSDK].OAuth2Session performAuthorizationCodeGrantWithReceivedURL:request.URL];
+    return NO;
+}
+
+
+#pragma mark - UIAppearance
+
+-(void) customizeAppearance
+{
+    self.window.tintColor = [UIColor PLTintColor];
 }
 
 @end

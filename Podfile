@@ -3,8 +3,8 @@
 
 target "PaylevenTest" do
 
-#pod 'AFNetworking', '~> 2.2'
 pod 'box-ios-sdk-v2', '~> 1.2'
+pod 'HexColors', '~> 2.2'
 
 end
 

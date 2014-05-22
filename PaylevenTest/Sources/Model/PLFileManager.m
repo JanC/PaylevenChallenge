@@ -37,7 +37,7 @@
     self = [super init];
     if ( self )
     {
-        self.apiClient = [[PLBoxAPIClient alloc] initWithAuthorizationToken:@"FN7BZFBMaiENu3V1lWRSB6QnGhMI1iZK"];
+        self.apiClient = [[PLBoxAPIClient alloc] initWithAuthorizationToken:nil];
     }
 
     return self;

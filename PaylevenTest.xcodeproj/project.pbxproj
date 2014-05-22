@@ -8,8 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		18415863F96A796DDDB0C003 /* PLListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18415FA77F7BECB1348B288B /* PLListViewController.m */; };
+		19A1711DECD74609F0C0266D /* UIFont+PLStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A174A531EE00D4F41B5037 /* UIFont+PLStyle.m */; };
+		19A175211AEA38CC0676E1EE /* PLFileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1725FC3F6C1868395E5D5 /* PLFileTableViewCell.m */; };
+		19A176159F63C0D644B702F6 /* UIColor+PLStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1706516345C74B3AAD4AF /* UIColor+PLStyle.m */; };
 		19A177C285FE5E433FF40051 /* PLFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17A9ED2170E6961C01DB2 /* PLFile.m */; };
 		19A17A564F9995AA8E5D7CF1 /* PLFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17E645D5C2CCD457344FF /* PLFileManager.m */; };
+		19A17AC139A74A2444D8BCFC /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19A176B6D7BE6519041EE2A9 /* ProximaNova-Semibold.otf */; };
+		19A17E282ED6A33FC561DB66 /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 19A1702451C4850210FB99F4 /* ProximaNova-Regular.otf */; };
 		40B7A6400A5C4C3C8E618C33 /* libPods-PaylevenTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB469160E62A44EC9924899D /* libPods-PaylevenTest.a */; };
 		D798E9B9192B45C500BC8CF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9B8192B45C500BC8CF8 /* Foundation.framework */; };
 		D798E9BB192B45C500BC8CF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9BA192B45C500BC8CF8 /* CoreGraphics.framework */; };
@@ -44,7 +49,15 @@
 		184153EE851DC684C83EE3E5 /* PLListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLListViewController.h; sourceTree = "<group>"; };
 		18415FA77F7BECB1348B288B /* PLListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLListViewController.m; sourceTree = "<group>"; };
 		18415FFEEFA62AD6F85037C0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		19A1702451C4850210FB99F4 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file.otf; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		19A1706516345C74B3AAD4AF /* UIColor+PLStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PLStyle.m"; sourceTree = "<group>"; };
+		19A1725FC3F6C1868395E5D5 /* PLFileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFileTableViewCell.m; sourceTree = "<group>"; };
+		19A174A531EE00D4F41B5037 /* UIFont+PLStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PLStyle.m"; sourceTree = "<group>"; };
+		19A175BE606E171B190AE174 /* UIColor+PLStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PLStyle.h"; sourceTree = "<group>"; };
 		19A1761A9BE2B607F1769296 /* PLFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFile.h; sourceTree = "<group>"; };
+		19A176B6D7BE6519041EE2A9 /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file.otf; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		19A17A278FF8158286CF6436 /* UIFont+PLStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+PLStyle.h"; sourceTree = "<group>"; };
+		19A17A2A9A81F13EA5E3586D /* PLFileTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFileTableViewCell.h; sourceTree = "<group>"; };
 		19A17A9ED2170E6961C01DB2 /* PLFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFile.m; sourceTree = "<group>"; };
 		19A17E645D5C2CCD457344FF /* PLFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFileManager.m; sourceTree = "<group>"; };
 		19A17E657A64CE87776029C9 /* PLFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFileManager.h; sourceTree = "<group>"; };
@@ -134,8 +147,47 @@
 				184155F97A7D347A5A2DAAE0 /* Model */,
 				D91FC66C49835710ADD5FB57 /* Network */,
 				D91FCC12C43DCA9AEBF8ED23 /* Categories */,
+				19A17E3C4DDCBED268DC2C63 /* Style */,
+				19A1787DCEEB2611367A74DE /* Views */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		19A1787DCEEB2611367A74DE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19A17E133D87B6816DD107D4 /* TableView Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		19A17943D52E3669A14FF888 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				19A1702451C4850210FB99F4 /* ProximaNova-Regular.otf */,
+				19A176B6D7BE6519041EE2A9 /* ProximaNova-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		19A17E133D87B6816DD107D4 /* TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				19A1725FC3F6C1868395E5D5 /* PLFileTableViewCell.m */,
+				19A17A2A9A81F13EA5E3586D /* PLFileTableViewCell.h */,
+			);
+			path = "TableView Cells";
+			sourceTree = "<group>";
+		};
+		19A17E3C4DDCBED268DC2C63 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				19A17A278FF8158286CF6436 /* UIFont+PLStyle.h */,
+				19A174A531EE00D4F41B5037 /* UIFont+PLStyle.m */,
+				19A175BE606E171B190AE174 /* UIColor+PLStyle.h */,
+				19A1706516345C74B3AAD4AF /* UIColor+PLStyle.m */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		D798E9AC192B45C500BC8CF8 = {
@@ -233,6 +285,7 @@
 			children = (
 				D91FCDA9CD32B89ECE7A4433 /* Localizable.strings */,
 				D91FC9093C5A43929FF568B4 /* Images.xcassets */,
+				19A17943D52E3669A14FF888 /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -345,6 +398,8 @@
 				D798E9C3192B45C500BC8CF8 /* InfoPlist.strings in Resources */,
 				D91FCDD8BCA9FF57BA9ECBAD /* Localizable.strings in Resources */,
 				D91FC146875D9DD0165B8613 /* Images.xcassets in Resources */,
+				19A17E282ED6A33FC561DB66 /* ProximaNova-Regular.otf in Resources */,
+				19A17AC139A74A2444D8BCFC /* ProximaNova-Semibold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +460,9 @@
 				D91FC444D76C2CE199D5A3F9 /* PLJSONParser.m in Sources */,
 				D91FCC6F73C4610E052E06C2 /* PLFile+PLBoxFile.m in Sources */,
 				D91FC079027DD121470103F2 /* NSError+PLError.m in Sources */,
+				19A1711DECD74609F0C0266D /* UIFont+PLStyle.m in Sources */,
+				19A176159F63C0D644B702F6 /* UIColor+PLStyle.m in Sources */,
+				19A175211AEA38CC0676E1EE /* PLFileTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

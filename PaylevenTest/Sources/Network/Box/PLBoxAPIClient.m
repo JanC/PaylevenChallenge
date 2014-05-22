@@ -30,6 +30,10 @@ NSString *const PLBoxAPIListFolderPath = @"folders/%@/items";
     self = [super init];
     if ( self )
     {
+
+        // Since I did not implement the autorization, I just the SDK directly here
+        authorizationToken = [BoxSDK sharedSDK].OAuth2Session.accessToken;
+
         NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
 
         sessionConfig.HTTPAdditionalHeaders = @{

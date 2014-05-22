@@ -6,10 +6,11 @@
 #import "PLListViewController.h"
 #import "PLFile.h"
 #import "PLFileManager.h"
+#import "PLFileTableViewCell.h"
 
 NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
 
-@interface PLListViewController ()
+@interface PLListViewController () <BoxAuthorizationViewControllerDelegate>
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
 @property(nonatomic, strong, readwrite) NSArray *plFiles;
@@ -31,6 +32,10 @@ NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
     if(self)
     {
         self.currentFolder = folder;
+        if(folder)
+        {
+            self.title = folder.name;
+        }
     }
 
     return self;
@@ -43,7 +48,7 @@ NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
     // Setup table view
     //
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:PLListViewControllerCellId];
+    [self.tableView registerClass:[PLFileTableViewCell class] forCellReuseIdentifier:PLListViewControllerCellId];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];

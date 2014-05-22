@@ -1,0 +1,15 @@
+PODS:
+  - box-ios-sdk-v2 (1.2.2):
+    - box-ios-sdk-v2/no-arc
+  - box-ios-sdk-v2/no-arc (1.2.2)
+  - HexColors (2.2.1)
+
+DEPENDENCIES:
+  - box-ios-sdk-v2 (~> 1.2)
+  - HexColors (~> 2.2)
+
+SPEC CHECKSUMS:
+  box-ios-sdk-v2: 5ce116481c2990693bd58405e70bd8b28ace44a4
+  HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
+
+COCOAPODS: 0.32.1
