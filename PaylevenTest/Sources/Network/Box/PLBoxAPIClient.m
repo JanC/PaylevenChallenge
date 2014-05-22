@@ -7,6 +7,7 @@
 #import "PLFile.h"
 #import "PLJSONParser.h"
 #import "NSError+PLError.h"
+#import "NSURL+PLURL.h"
 
 #pragma mark - Constants
 
@@ -28,22 +29,26 @@ NSString *const PLBoxAPIListFolderPath = @"folders/%@/items";
 - (instancetype)initWithAuthorizationToken:(NSString *)authorizationToken
 {
     self = [super init];
-    if ( self )
+
+    if (self)
     {
 
         // Since I did not implement the autorization, I just the SDK directly here
         authorizationToken = [BoxSDK sharedSDK].OAuth2Session.accessToken;
 
+        NSLog(@"Auth token is %@", authorizationToken);
+
         NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
 
         sessionConfig.HTTPAdditionalHeaders = @{
-                @"Authorization" : [NSString stringWithFormat:@"Bearer %@", authorizationToken],
+            @"Authorization" : [NSString stringWithFormat:@"Bearer %@", authorizationToken],
         };
 
         self.session = [NSURLSession sessionWithConfiguration:sessionConfig];
         self.authorizationToken = authorizationToken;
         self.parser = [[PLJSONParser alloc] init];
     }
+
     return self;
 }
 
@@ -56,33 +61,35 @@ NSString *const PLBoxAPIListFolderPath = @"folders/%@/items";
 
     [[self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 
-        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
 
-        NSArray *plFiles;
-        NSError *apiError = error;
-        if(httpResponse.statusCode == 200) {
-            plFiles = [self.parser parseFileItemsWithData:data];
-        }
-        else
-        {
-            //
-            // dummy error handling
-            //
-            apiError = [NSError errorWithPLCode:httpResponse.statusCode];
-        }
+            NSArray *plFiles;
+            NSError *apiError = error;
 
+            if (httpResponse.statusCode == 200)
+            {
+                plFiles = [self.parser parseFileItemsWithData:data];
+            }
+            else
+            {
+                //
+                // dummy error handling
+                //
+                apiError = [NSError errorWithPLCode:httpResponse.statusCode];
+            }
 
-
-
-        completion(plFiles, apiError);
-    }] resume];
+            completion(plFiles, apiError);
+        }] resume];
 }
 
 - (NSURLRequest *)PLURLForListItemInFolder:(PLFile *)folder
 {
-    NSString *path = [NSString stringWithFormat:PLBoxAPIListFolderPath, folder.uid ? folder.uid : @"0"];
+    NSString *path = [NSString stringWithFormat:PLBoxAPIListFolderPath, folder.uid ? folder.uid:@"0"];
     NSString *urlString = [PLBoxAPIClientBaseURL stringByAppendingPathComponent:path];
     NSURL *url = [NSURL URLWithString:urlString];
+
+    url = [url URLByAppendingQueryString:@"fields=name,created_at"];
+
     return [NSURLRequest requestWithURL:url];
 }
 

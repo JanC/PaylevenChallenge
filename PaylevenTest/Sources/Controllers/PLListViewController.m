@@ -7,39 +7,44 @@
 #import "PLFile.h"
 #import "PLFileManager.h"
 #import "PLFileTableViewCell.h"
+#import "SVProgressHUD.h"
+#import "NSDateFormatter+PLFormat.h"
+#import "PLListArrayDataSource.h"
+#import "UIColor+PLStyle.h"
 
 NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
 
-@interface PLListViewController () <BoxAuthorizationViewControllerDelegate>
+@interface PLListViewController ()
 
 @property(nonatomic, strong, readwrite) UITableView *tableView;
-@property(nonatomic, strong, readwrite) NSArray *plFiles;
 @property(nonatomic, strong, readwrite) PLFile *currentFolder;
 
+@property(nonatomic, strong) PLListArrayDataSource *dataSource;
+@property(nonatomic, strong) UIRefreshControl *refreshControl;
 @end
 
 @implementation PLListViewController
 {
 }
 
--(id) initWithRootFolder
+- (id)initWithRootFolder
 {
     return [self initWithFolder:nil];
 }
--(id) initWithFolder:(PLFile *) folder
+
+- (id)initWithFolder:(PLFile *)folder
 {
     self = [self init];
-    if(self)
+
+    if (self)
     {
         self.currentFolder = folder;
-        if(folder)
-        {
-            self.title = folder.name;
-        }
+        self.title = folder ? folder.name : @"MyBox";
     }
 
     return self;
 }
+
 - (void)loadView
 {
     [super loadView];
@@ -50,13 +55,33 @@ NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
     self.tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.tableView registerClass:[PLFileTableViewCell class] forCellReuseIdentifier:PLListViewControllerCellId];
     self.tableView.delegate = self;
-    self.tableView.dataSource = self;
     [self.view addSubview:self.tableView];
+
+    //
+    // Data source for table
+    //
+    self.dataSource = [[PLListArrayDataSource alloc] initWithTableView:self.tableView
+                                                       reuseIdentifier:PLListViewControllerCellId
+                                                             cellClass:[PLFileTableViewCell class] configureCellBlock:^(UITableViewCell *cell, id modelObject) {
+        PLFile *file = modelObject;
+        cell.textLabel.text = file.name;
+
+        NSString *creationDateString = [[NSDateFormatter PLUIDateFormatter] stringFromDate:file.creationDate];
+        cell.detailTextLabel.text = [NSString stringWithFormat:NSLocalizedString(@"Created at %@", ), creationDateString];
+    }];
+    self.tableView.dataSource = self.dataSource;
+
+    //
+    // Setup refresh control
+    //
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.tintColor = [UIColor PLTintColor];
+    [self.refreshControl addTarget:self action:@selector(triggerRefresh:) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.refreshControl];
 
     //
     // Auto Layout
     //
-
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     NSDictionary *views = NSDictionaryOfVariableBindings(_tableView);
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_tableView]|" options:0 metrics:nil views:views]];
@@ -66,48 +91,30 @@ NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self triggerRefresh];
-
-}
-
-#pragma mark - UITableViewDataSource
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.plFiles.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:PLListViewControllerCellId forIndexPath:indexPath];
-
-    //
-    // configure cell
-    //
-    PLFile *file = self.plFiles[indexPath.row];
-    cell.textLabel.text = file.name;
-
-    return cell;
+    [self triggerRefresh:self];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    PLFile *file = self.plFiles[indexPath.row];
-    if(file.isDirectory)
+    PLFile *file = [self.dataSource modelObjectForIndexPath:indexPath];
+
+    if (file.isDirectory)
     {
         [self.navigationController pushViewController:[[PLListViewController alloc] initWithFolder:file] animated:YES];
     }
-
 }
 
 #pragma mark - Helpers
 
--(void) triggerRefresh
+- (void)triggerRefresh:(id)sender
 {
+    [self.refreshControl endRefreshing];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Loading", @"Loading")];
+
     [[PLFileManager sharedManager] listFilesInFolder:self.currentFolder completion:^(NSArray *plFiles, NSError *error) {
-        self.plFiles = plFiles;
-        [self.tableView reloadData];
+        self.dataSource.dataSource = plFiles;
+        [SVProgressHUD dismiss];
     }];
 }
 

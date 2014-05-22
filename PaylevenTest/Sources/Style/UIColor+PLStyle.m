@@ -3,10 +3,7 @@
 #import "UIColor+PLStyle.h"
 #import "HexColor.h"
 
-
 @implementation UIColor (PLStyle)
-
-
 
 #pragma mark  
 #pragma mark - Default Colors -
@@ -16,7 +13,6 @@
     return [UIColor colorWithHexString:@"#1092B7"];
 
 }
-
 
 #pragma mark  
 #pragma mark Text Colors
@@ -34,6 +30,5 @@
 {
     return [UIColor colorWithHexString:@"#2666B5"];
 }
-
 
 @end

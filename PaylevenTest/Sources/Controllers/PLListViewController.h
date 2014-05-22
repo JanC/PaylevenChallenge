@@ -6,8 +6,9 @@
 #import <Foundation/Foundation.h>
 
 @class PLFile;
+@class PLListArrayDataSource;
 
-@interface PLListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface PLListViewController : UIViewController <UITableViewDelegate>
 
 -(id) initWithRootFolder;
 -(id) initWithFolder:(PLFile *) folder;

@@ -20,6 +20,7 @@
 {
     static dispatch_once_t onceToken;
     static PLFileManager *instance;
+
     dispatch_once(&onceToken, ^{
 
         //
@@ -35,7 +36,8 @@
 - (id)init
 {
     self = [super init];
-    if ( self )
+
+    if (self)
     {
         self.apiClient = [[PLBoxAPIClient alloc] initWithAuthorizationToken:nil];
     }
@@ -52,8 +54,8 @@
         // Just forward the completion to the caller. Here would be done any local peristance in e.g. core data
         //
         dispatch_async(dispatch_get_main_queue(), ^{
-            completion(plFiles, error);
-        });
+                completion(plFiles, error);
+            });
 
     }];
 }

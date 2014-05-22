@@ -9,6 +9,8 @@
 #import "PLAppDelegate.h"
 #import "PLListViewController.h"
 #import "UIColor+PLStyle.h"
+#import "SVProgressHUD.h"
+#import "UIFont+PLStyle.h"
 
 @interface PLAppDelegate () <BoxAuthorizationViewControllerDelegate>
 @end
@@ -112,6 +114,19 @@
 -(void) customizeAppearance
 {
     self.window.tintColor = [UIColor PLTintColor];
+
+    // and uses a custom title font
+    NSDictionary *attributes = @{
+            NSFontAttributeName : [UIFont PLNavigationBarFont],
+            NSForegroundColorAttributeName : [UIColor PLDefaultTextColor],
+    };
+    [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+
+    [[UIView appearance] setTintColor:[UIColor PLTintColor]];
+
+    [SVProgressHUD setRingThickness:0.7];
+    [SVProgressHUD setBackgroundColor:[UIColor PLTintColor]];
+    [SVProgressHUD setForegroundColor:[UIColor whiteColor]];
 }
 
 @end

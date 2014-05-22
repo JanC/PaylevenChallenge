@@ -1,6 +1,6 @@
 //
-// Created by Jan Chaloupecky on 06/05/14.
-// Copyright (c) 2014 Neofonie Mobile GPLH. All rights reserved.
+// Created by Jan Chaloupecky on 21/05/14.
+// Copyright (c) 2014 dev. All rights reserved.
 //
 
 #import "UIFont+PLStyle.h"
@@ -10,13 +10,10 @@
 #pragma mark  
 #pragma mark - Generic Fonts -
 
-
-
 + (UIFont *)regularFontWithSize:(CGFloat)size;
 {
     return [UIFont fontWithName:@"ProximaNova-Regular" size:size];
 }
-
 
 #pragma mark  
 #pragma mark - Fonts by use Case -
@@ -32,12 +29,8 @@
 
 #pragma mark  
 
-
-
 #pragma mark  
 #pragma mark Table View Cells
-
-
 
 + (UIFont *)PLDefaultTextFont
 {

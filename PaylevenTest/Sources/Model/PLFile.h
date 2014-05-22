@@ -7,8 +7,9 @@
 
 @interface PLFile : NSObject
 
-@property (nonatomic, strong, readwrite) NSString *uid;
-@property (nonatomic, strong, readwrite) NSString *name;
-@property (nonatomic, assign, readwrite, getter=isDirectory) BOOL directory;
+@property(nonatomic, strong, readwrite) NSString *uid;
+@property(nonatomic, strong, readwrite) NSString *name;
+@property(nonatomic, strong, readwrite) NSDate *creationDate;
+@property(nonatomic, assign, readwrite, getter=isDirectory) BOOL directory;
 
 @end

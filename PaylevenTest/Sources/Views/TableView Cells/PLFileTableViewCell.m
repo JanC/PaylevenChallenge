@@ -13,8 +13,9 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
-    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
-    if ( self )
+    self = [super initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:reuseIdentifier];
+
+    if (self)
     {
 
         //
@@ -23,8 +24,8 @@
         self.textLabel.textColor = [UIColor PLDefaultTextColor];
         self.textLabel.font = [UIFont PLDefaultTextFont];
 
-        self.detailTextLabel.textColor = [UIColor PLDefaultTextColor];
-        self.detailTextLabel.font = [UIFont PLDefaultTextFont];
+        self.detailTextLabel.textColor = [UIColor PLLightTextGrayColor];
+        self.detailTextLabel.font = [UIFont PLDefaultSmallTextFont];
     }
 
     return self;

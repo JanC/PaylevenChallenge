@@ -16,7 +16,8 @@
     NSError *error;
     NSMutableArray *plFileArray = [NSMutableArray array];
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-    if ( error )
+
+    if (error)
     {
         NSLog(@"parse error %@", error);
     }
@@ -27,6 +28,7 @@
             [plFileArray addObject:[[PLFile alloc] initWithDictionary:entry]];
         }];
     }
+
     return [NSArray arrayWithArray:plFileArray];
 }
 

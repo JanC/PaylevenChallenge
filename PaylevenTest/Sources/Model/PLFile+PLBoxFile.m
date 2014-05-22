@@ -4,6 +4,7 @@
 //
 
 #import "PLFile+PLBoxFile.h"
+#import "NSDateFormatter+PLFormat.h"
 
 @implementation PLFile (PLBoxFile)
 
@@ -15,6 +16,7 @@
         self.uid = dictionary[@"id"];
         self.directory = [dictionary[@"type"] isEqualToString:@"folder"];
         self.name = dictionary[@"name"];
+        self.creationDate = [[NSDateFormatter PLParseFormatter] dateFromString:dictionary[@"created_at"]];
     }
     return self;
 }
