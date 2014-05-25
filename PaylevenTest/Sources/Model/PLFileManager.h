@@ -10,10 +10,14 @@
 @class PLBoxAPIClient;
 
 typedef void (^PLFileManagerListCompletionBlock)(NSArray *plFiles, NSError *error);
+typedef void (^PLProgressBlock)(CGFloat progress);
+typedef void (^PLFileManagerUploadCompletionBlock)(PLFile *uploadedFile, NSError *error);
 
 @interface PLFileManager : NSObject
 
 + (id)sharedManager;
 
 -(void) listFilesInFolder:(PLFile *) folder completion:(PLFileManagerListCompletionBlock) completion;
+
+- (void)uploadFile:(PLFile *)file progress:(PLProgressBlock)progress completion:(PLFileManagerUploadCompletionBlock)completion;
 @end

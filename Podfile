@@ -6,6 +6,7 @@ target "PaylevenTest" do
 pod 'box-ios-sdk-v2', '~> 1.2'
 pod 'HexColors', '~> 2.2'
 pod 'SVProgressHUD', :head
+pod 'PKMultipartInputStream', '~> 1.1'
 
 end
 

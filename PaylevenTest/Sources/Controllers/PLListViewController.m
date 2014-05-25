@@ -82,6 +82,13 @@ NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
     [self.tableView addSubview:self.refreshControl];
 
     //
+    // setup upload button
+    //
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                                           target:self
+                                                                                           action:@selector(actionButtonTouchedUpInside:)];
+
+    //
     // Auto Layout
     //
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -119,5 +126,39 @@ NSString *const PLListViewControllerCellId = @"PLListViewControllerCellId";
         [SVProgressHUD dismiss];
     }];
 }
+
+#pragma mark - Actions
+
+-(void) actionButtonTouchedUpInside:(id)sender {
+
+    PLFile *plFile = [[PLFile alloc] init];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"Upolading", @"Upolading")];
+
+    plFile.name = @"chaloupecky_jan_cv_en_2014.pdf";
+    plFile.data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"chaloupecky_jan_cv_en_2014" ofType:@"pdf"]];
+
+
+    [[PLFileManager sharedManager] uploadFile:plFile progress:^(CGFloat progress) {
+        NSLog(@"progress %2f", progress);
+
+    } completion:^(PLFile *uploadedFile, NSError *error) {
+        NSLog(@"upload done");
+        if(error)
+        {
+            [SVProgressHUD dismiss];
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                message:error.localizedDescription
+                                                               delegate:nil
+                                                      cancelButtonTitle:nil
+                                                      otherButtonTitles:@"OK", nil];
+            [alertView show];
+        }
+        else
+        {
+            [self triggerRefresh:nil];
+        }
+    }];
+}
+
 
 @end

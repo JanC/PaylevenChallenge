@@ -8,18 +8,26 @@
 #import "PLJSONParser.h"
 #import "NSError+PLError.h"
 #import "NSURL+PLURL.h"
+#import "PLFileManager.h"
+#import "PKMultipartInputStream.h"
 
 #pragma mark - Constants
 
 NSString *const PLBoxAPIClientBaseURL = @"https://api.box.com/2.0/";
 NSString *const PLBoxAPIListFolderPath = @"folders/%@/items";
 
-@interface PLBoxAPIClient ()
+NSString *const PLBoxAPIClientUploadBaseURL = @"https://upload.box.com/api/2.0/files/content";
+
+@interface PLBoxAPIClient () <NSURLSessionTaskDelegate, NSURLSessionDelegate>
 
 @property(nonatomic, strong, readwrite) NSString *clientID;
 @property(nonatomic, strong, readwrite) NSString *authorizationToken;
+@property(nonatomic, strong) NSURLSession *session;
+@property(nonatomic, strong) NSURLSession *uploadSession;
 
 @property(nonatomic, strong) id <PLParser> parser;
+@property(nonatomic, copy) PLUploadCompletionBlock currentCompletionBlock;
+@property(nonatomic, copy) PLProgressBlock currentProgressBlock;
 @end
 
 @implementation PLBoxAPIClient
@@ -30,7 +38,7 @@ NSString *const PLBoxAPIListFolderPath = @"folders/%@/items";
 {
     self = [super init];
 
-    if (self)
+    if ( self )
     {
 
         // Since I did not implement the autorization, I just the SDK directly here
@@ -41,8 +49,12 @@ NSString *const PLBoxAPIListFolderPath = @"folders/%@/items";
         NSURLSessionConfiguration *sessionConfig = [NSURLSessionConfiguration defaultSessionConfiguration];
 
         sessionConfig.HTTPAdditionalHeaders = @{
-            @"Authorization" : [NSString stringWithFormat:@"Bearer %@", authorizationToken],
+                @"Authorization" : [NSString stringWithFormat:@"Bearer %@", authorizationToken],
         };
+
+        self.uploadSession = [NSURLSession sessionWithConfiguration:sessionConfig
+                                                           delegate:self
+                                                      delegateQueue:nil];
 
         self.session = [NSURLSession sessionWithConfiguration:sessionConfig];
         self.authorizationToken = authorizationToken;
@@ -57,34 +69,73 @@ NSString *const PLBoxAPIListFolderPath = @"folders/%@/items";
 - (void)fetchFolderItems:(PLFile *)folder withCompletion:(PLFetchFolderCompletion)completion
 {
 
-    NSURLRequest *request = [self PLURLForListItemInFolder:folder];
+    NSURLRequest *request = [self URLForListItemInFolder:folder];
 
     [[self.session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 
-            NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
 
-            NSArray *plFiles;
-            NSError *apiError = error;
+        NSArray *plFiles;
+        NSError *apiError = error;
 
-            if (httpResponse.statusCode == 200)
-            {
-                plFiles = [self.parser parseFileItemsWithData:data];
-            }
-            else
-            {
-                //
-                // dummy error handling
-                //
-                apiError = [NSError errorWithPLCode:httpResponse.statusCode];
-            }
+        if ( httpResponse.statusCode == 200 )
+        {
+            plFiles = [self.parser parseFileItemsWithData:data];
+        }
+        else
+        {
+            //
+            // dummy error handling
+            //
+            apiError = [NSError errorWithPLCode:httpResponse.statusCode];
+        }
 
-            completion(plFiles, apiError);
-        }] resume];
+        completion(plFiles, apiError);
+    }] resume];
 }
 
-- (NSURLRequest *)PLURLForListItemInFolder:(PLFile *)folder
+- (void)requestAuthTicketWithCompletion:(void (^)())completion
 {
-    NSString *path = [NSString stringWithFormat:PLBoxAPIListFolderPath, folder.uid ? folder.uid:@"0"];
+}
+
+- (void)uploadFile:(PLFile *)file progress:(PLProgressBlock)progress completion:(PLUploadCompletionBlock)completion
+{
+    self.currentCompletionBlock = completion;
+    self.currentProgressBlock = progress;
+
+    NSURLSessionUploadTask *uploadTask = [self.uploadSession uploadTaskWithStreamedRequest:[self URLForUpload:file]];
+    [uploadTask resume];
+}
+
+#pragma Mark - NSURLSessionTaskDelegate
+
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
+   didSendBodyData:(int64_t)bytesSent
+    totalBytesSent:(int64_t)totalBytesSent
+        totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend
+{
+    if(totalBytesExpectedToSend != NSURLSessionTransferSizeUnknown)
+    {
+        float progress = (float) totalBytesSent / (float) totalBytesExpectedToSend;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.currentProgressBlock(progress);
+        });
+    }
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.currentCompletionBlock(nil, error);
+    });
+}
+
+#pragma mark - Helper
+
+- (NSURLRequest *)URLForListItemInFolder:(PLFile *)folder
+{
+    NSString *path = [NSString stringWithFormat:PLBoxAPIListFolderPath, folder.uid ? folder.uid : @"0"];
     NSString *urlString = [PLBoxAPIClientBaseURL stringByAppendingPathComponent:path];
     NSURL *url = [NSURL URLWithString:urlString];
 
@@ -93,8 +144,23 @@ NSString *const PLBoxAPIListFolderPath = @"folders/%@/items";
     return [NSURLRequest requestWithURL:url];
 }
 
-- (void)requestAuthTicketWithCompletion:(void (^)())completion
+- (NSURLRequest *)URLForUpload:(PLFile *) plFile
 {
+    NSURL *url = [NSURL URLWithString:PLBoxAPIClientUploadBaseURL];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+
+    PKMultipartInputStream *body = [[PKMultipartInputStream alloc] init];
+    [body addPartWithName:@"parent_id" string:@"0"];
+
+
+    [body addPartWithName:@"filename" filename:plFile.name stream:[NSInputStream inputStreamWithData:plFile.data] streamLength:plFile.data.length];
+
+    [request setValue:[NSString stringWithFormat:@"multipart/form-data; boundary=%@", [body boundary]] forHTTPHeaderField:@"Content-Type"];
+    [request setValue:[NSString stringWithFormat:@"%d", [body length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBodyStream:body];
+
+    [request setHTTPMethod:@"POST"];
+    return request;
 }
 
 @end

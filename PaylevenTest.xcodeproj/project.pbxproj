@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18415863F96A796DDDB0C003 /* PLListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18415FA77F7BECB1348B288B /* PLListViewController.m */; };
 		19A1711DECD74609F0C0266D /* UIFont+PLStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A174A531EE00D4F41B5037 /* UIFont+PLStyle.m */; };
+		19A171390E2FD0905F48C8D1 /* chaloupecky_jan_cv_en_2014.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 19A171203B045FFE2471D42B /* chaloupecky_jan_cv_en_2014.pdf */; };
 		19A175211AEA38CC0676E1EE /* PLFileTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1725FC3F6C1868395E5D5 /* PLFileTableViewCell.m */; };
 		19A176159F63C0D644B702F6 /* UIColor+PLStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A1706516345C74B3AAD4AF /* UIColor+PLStyle.m */; };
 		19A177C285FE5E433FF40051 /* PLFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 19A17A9ED2170E6961C01DB2 /* PLFile.m */; };
@@ -55,6 +56,7 @@
 		18415FFEEFA62AD6F85037C0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		19A1702451C4850210FB99F4 /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file.otf; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
 		19A1706516345C74B3AAD4AF /* UIColor+PLStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PLStyle.m"; sourceTree = "<group>"; };
+		19A171203B045FFE2471D42B /* chaloupecky_jan_cv_en_2014.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = chaloupecky_jan_cv_en_2014.pdf; sourceTree = "<group>"; };
 		19A1725FC3F6C1868395E5D5 /* PLFileTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFileTableViewCell.m; sourceTree = "<group>"; };
 		19A174A531EE00D4F41B5037 /* UIFont+PLStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+PLStyle.m"; sourceTree = "<group>"; };
 		19A175BE606E171B190AE174 /* UIColor+PLStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PLStyle.h"; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 			path = Style;
 			sourceTree = "<group>";
 		};
+		19A17E76C503796A8A95883A /* Sample Data */ = {
+			isa = PBXGroup;
+			children = (
+				19A171203B045FFE2471D42B /* chaloupecky_jan_cv_en_2014.pdf */,
+			);
+			path = "Sample Data";
+			sourceTree = "<group>";
+		};
 		D798E9AC192B45C500BC8CF8 = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +312,7 @@
 				D91FCDA9CD32B89ECE7A4433 /* Localizable.strings */,
 				D91FC9093C5A43929FF568B4 /* Images.xcassets */,
 				19A17943D52E3669A14FF888 /* Fonts */,
+				19A17E76C503796A8A95883A /* Sample Data */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -420,6 +431,7 @@
 				D91FC146875D9DD0165B8613 /* Images.xcassets in Resources */,
 				19A17E282ED6A33FC561DB66 /* ProximaNova-Regular.otf in Resources */,
 				19A17AC139A74A2444D8BCFC /* ProximaNova-Semibold.otf in Resources */,
+				19A171390E2FD0905F48C8D1 /* chaloupecky_jan_cv_en_2014.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

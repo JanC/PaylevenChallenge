@@ -59,4 +59,10 @@
 
     }];
 }
+
+- (void)uploadFile:(PLFile *)file progress:(PLProgressBlock)progress completion:(PLFileManagerUploadCompletionBlock)completion
+{
+    [self.apiClient uploadFile:file progress:progress completion:completion];
+
+}
 @end

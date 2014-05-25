@@ -12,4 +12,6 @@
 @property(nonatomic, strong, readwrite) NSDate *creationDate;
 @property(nonatomic, assign, readwrite, getter=isDirectory) BOOL directory;
 
+@property(nonatomic, strong, readwrite) NSData *data;
+
 @end
