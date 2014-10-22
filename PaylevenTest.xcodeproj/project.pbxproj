@@ -23,11 +23,6 @@
 		D798E9C3192B45C500BC8CF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D798E9C1192B45C500BC8CF8 /* InfoPlist.strings */; };
 		D798E9C5192B45C500BC8CF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D798E9C4192B45C500BC8CF8 /* main.m */; };
 		D798E9C9192B45C500BC8CF8 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D798E9C8192B45C500BC8CF8 /* PLAppDelegate.m */; };
-		D798E9D2192B45C500BC8CF8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9D1192B45C500BC8CF8 /* XCTest.framework */; };
-		D798E9D3192B45C500BC8CF8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9B8192B45C500BC8CF8 /* Foundation.framework */; };
-		D798E9D4192B45C500BC8CF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D798E9BC192B45C500BC8CF8 /* UIKit.framework */; };
-		D798E9DC192B45C500BC8CF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D798E9DA192B45C500BC8CF8 /* InfoPlist.strings */; };
-		D798E9DE192B45C500BC8CF8 /* PaylevenTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D798E9DD192B45C500BC8CF8 /* PaylevenTestTests.m */; };
 		D91FC079027DD121470103F2 /* NSError+PLError.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FC53DEAB59F1D01F55815 /* NSError+PLError.m */; };
 		D91FC146875D9DD0165B8613 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D91FC9093C5A43929FF568B4 /* Images.xcassets */; };
 		D91FC3F612DB646F1157CBE4 /* NSDateFormatter+PLFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FCD8A2C6918DCF375FBA3 /* NSDateFormatter+PLFormat.m */; };
@@ -39,16 +34,6 @@
 		D91FCC6F73C4610E052E06C2 /* PLFile+PLBoxFile.m in Sources */ = {isa = PBXBuildFile; fileRef = D91FCAB85CAFAA52E31B9492 /* PLFile+PLBoxFile.m */; };
 		D91FCDD8BCA9FF57BA9ECBAD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D91FCDA9CD32B89ECE7A4433 /* Localizable.strings */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		D798E9D5192B45C500BC8CF8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D798E9AD192B45C500BC8CF8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D798E9B4192B45C500BC8CF8;
-			remoteInfo = PaylevenTest;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		184153EE851DC684C83EE3E5 /* PLListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLListViewController.h; sourceTree = "<group>"; };
@@ -67,7 +52,8 @@
 		19A17A9ED2170E6961C01DB2 /* PLFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFile.m; sourceTree = "<group>"; };
 		19A17E645D5C2CCD457344FF /* PLFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLFileManager.m; sourceTree = "<group>"; };
 		19A17E657A64CE87776029C9 /* PLFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLFileManager.h; sourceTree = "<group>"; };
-		D054F74517474279B195AB67 /* Pods-PaylevenTest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylevenTest.xcconfig"; path = "Pods/Pods-PaylevenTest.xcconfig"; sourceTree = "<group>"; };
+		A720CBCCCE6BF45A8EC6C29F /* Pods-PaylevenTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylevenTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-PaylevenTest/Pods-PaylevenTest.release.xcconfig"; sourceTree = "<group>"; };
+		C6C87FFE07333AB09C946152 /* Pods-PaylevenTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PaylevenTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PaylevenTest/Pods-PaylevenTest.debug.xcconfig"; sourceTree = "<group>"; };
 		D798E9B5192B45C500BC8CF8 /* PaylevenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaylevenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798E9B8192B45C500BC8CF8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D798E9BA192B45C500BC8CF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,11 +64,7 @@
 		D798E9C6192B45C500BC8CF8 /* PaylevenTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PaylevenTest-Prefix.pch"; sourceTree = "<group>"; };
 		D798E9C7192B45C500BC8CF8 /* PLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAppDelegate.h; sourceTree = "<group>"; };
 		D798E9C8192B45C500BC8CF8 /* PLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAppDelegate.m; sourceTree = "<group>"; };
-		D798E9D0192B45C500BC8CF8 /* PaylevenTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaylevenTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D798E9D1192B45C500BC8CF8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D798E9D9192B45C500BC8CF8 /* PaylevenTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PaylevenTestTests-Info.plist"; sourceTree = "<group>"; };
-		D798E9DB192B45C500BC8CF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D798E9DD192B45C500BC8CF8 /* PaylevenTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaylevenTestTests.m; sourceTree = "<group>"; };
 		D91FC11D41C5FE4C432D16D7 /* PLListArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLListArrayDataSource.m; sourceTree = "<group>"; };
 		D91FC264B7759DACEE237A16 /* NSURL+PLURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+PLURL.m"; sourceTree = "<group>"; };
 		D91FC296AB416861B97830AC /* NSError+PLError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSError+PLError.h"; sourceTree = "<group>"; };
@@ -114,16 +96,6 @@
 				D798E9BD192B45C500BC8CF8 /* UIKit.framework in Frameworks */,
 				D798E9B9192B45C500BC8CF8 /* Foundation.framework in Frameworks */,
 				40B7A6400A5C4C3C8E618C33 /* libPods-PaylevenTest.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D798E9CD192B45C500BC8CF8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D798E9D2192B45C500BC8CF8 /* XCTest.framework in Frameworks */,
-				D798E9D4192B45C500BC8CF8 /* UIKit.framework in Frameworks */,
-				D798E9D3192B45C500BC8CF8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +137,15 @@
 				19A1787DCEEB2611367A74DE /* Views */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		188BD79C86D4D67DC14FE12E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C6C87FFE07333AB09C946152 /* Pods-PaylevenTest.debug.xcconfig */,
+				A720CBCCCE6BF45A8EC6C29F /* Pods-PaylevenTest.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		19A1787DCEEB2611367A74DE /* Views */ = {
@@ -218,11 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				D798E9BE192B45C500BC8CF8 /* PaylevenTest */,
-				D798E9D7192B45C500BC8CF8 /* PaylevenTestTests */,
 				D798E9B7192B45C500BC8CF8 /* Frameworks */,
 				D798E9B6192B45C500BC8CF8 /* Products */,
 				18415FFEEFA62AD6F85037C0 /* Podfile */,
-				D054F74517474279B195AB67 /* Pods-PaylevenTest.xcconfig */,
+				188BD79C86D4D67DC14FE12E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				D798E9B5192B45C500BC8CF8 /* PaylevenTest.app */,
-				D798E9D0192B45C500BC8CF8 /* PaylevenTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,24 +245,6 @@
 				D798E9C1192B45C500BC8CF8 /* InfoPlist.strings */,
 				D798E9C4192B45C500BC8CF8 /* main.m */,
 				D798E9C6192B45C500BC8CF8 /* PaylevenTest-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D798E9D7192B45C500BC8CF8 /* PaylevenTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				D798E9DD192B45C500BC8CF8 /* PaylevenTestTests.m */,
-				D798E9D8192B45C500BC8CF8 /* Supporting Files */,
-			);
-			path = PaylevenTestTests;
-			sourceTree = "<group>";
-		};
-		D798E9D8192B45C500BC8CF8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D798E9D9192B45C500BC8CF8 /* PaylevenTestTests-Info.plist */,
-				D798E9DA192B45C500BC8CF8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -370,24 +331,6 @@
 			productReference = D798E9B5192B45C500BC8CF8 /* PaylevenTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D798E9CF192B45C500BC8CF8 /* PaylevenTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D798E9E4192B45C500BC8CF8 /* Build configuration list for PBXNativeTarget "PaylevenTestTests" */;
-			buildPhases = (
-				D798E9CC192B45C500BC8CF8 /* Sources */,
-				D798E9CD192B45C500BC8CF8 /* Frameworks */,
-				D798E9CE192B45C500BC8CF8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D798E9D6192B45C500BC8CF8 /* PBXTargetDependency */,
-			);
-			name = PaylevenTestTests;
-			productName = PaylevenTestTests;
-			productReference = D798E9D0192B45C500BC8CF8 /* PaylevenTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -397,11 +340,6 @@
 				CLASSPREFIX = PL;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = dev;
-				TargetAttributes = {
-					D798E9CF192B45C500BC8CF8 = {
-						TestTargetID = D798E9B4192B45C500BC8CF8;
-					};
-				};
 			};
 			buildConfigurationList = D798E9B0192B45C500BC8CF8 /* Build configuration list for PBXProject "PaylevenTest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -416,7 +354,6 @@
 			projectRoot = "";
 			targets = (
 				D798E9B4192B45C500BC8CF8 /* PaylevenTest */,
-				D798E9CF192B45C500BC8CF8 /* PaylevenTestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -432,14 +369,6 @@
 				19A17E282ED6A33FC561DB66 /* ProximaNova-Regular.otf in Resources */,
 				19A17AC139A74A2444D8BCFC /* ProximaNova-Semibold.otf in Resources */,
 				19A171390E2FD0905F48C8D1 /* chaloupecky_jan_cv_en_2014.pdf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D798E9CE192B45C500BC8CF8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D798E9DC192B45C500BC8CF8 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,7 +402,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-PaylevenTest-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PaylevenTest/Pods-PaylevenTest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -502,37 +431,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D798E9CC192B45C500BC8CF8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D798E9DE192B45C500BC8CF8 /* PaylevenTestTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D798E9D6192B45C500BC8CF8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D798E9B4192B45C500BC8CF8 /* PaylevenTest */;
-			targetProxy = D798E9D5192B45C500BC8CF8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D798E9C1192B45C500BC8CF8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				D798E9C2192B45C500BC8CF8 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		D798E9DA192B45C500BC8CF8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D798E9DB192B45C500BC8CF8 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -612,7 +517,7 @@
 		};
 		D798E9E2192B45C500BC8CF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D054F74517474279B195AB67 /* Pods-PaylevenTest.xcconfig */;
+			baseConfigurationReference = C6C87FFE07333AB09C946152 /* Pods-PaylevenTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -634,7 +539,7 @@
 		};
 		D798E9E3192B45C500BC8CF8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D054F74517474279B195AB67 /* Pods-PaylevenTest.xcconfig */;
+			baseConfigurationReference = A720CBCCCE6BF45A8EC6C29F /* Pods-PaylevenTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -651,46 +556,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		D798E9E5192B45C500BC8CF8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PaylevenTest.app/PaylevenTest";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PaylevenTest/PaylevenTest-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "PaylevenTestTests/PaylevenTestTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		D798E9E6192B45C500BC8CF8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PaylevenTest.app/PaylevenTest";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "PaylevenTest/PaylevenTest-Prefix.pch";
-				INFOPLIST_FILE = "PaylevenTestTests/PaylevenTestTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -711,15 +576,6 @@
 			buildConfigurations = (
 				D798E9E2192B45C500BC8CF8 /* Debug */,
 				D798E9E3192B45C500BC8CF8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D798E9E4192B45C500BC8CF8 /* Build configuration list for PBXNativeTarget "PaylevenTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D798E9E5192B45C500BC8CF8 /* Debug */,
-				D798E9E6192B45C500BC8CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

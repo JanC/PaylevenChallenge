@@ -12,22 +12,34 @@
 	<dict>
 		<key>62C9D002-8E28-4B88-883B-C522DC92A531</key>
 		<string>https://github.com/JanC/PaylevenChallenge.git</string>
+		<key>F33D2DF36AAA9869A4E3994C10FBAD991A9312CB</key>
+		<string>https://github.com/JanC/PaylevenChallenge</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PaylevenTest.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>62C9D002-8E28-4B88-883B-C522DC92A531</key>
+		<string>../../PaylevenTest</string>
+		<key>F33D2DF36AAA9869A4E3994C10FBAD991A9312CB</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/JanC/PaylevenChallenge.git</string>
+	<string>https://github.com/JanC/PaylevenChallenge</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>62C9D002-8E28-4B88-883B-C522DC92A531</string>
+	<string>F33D2DF36AAA9869A4E3994C10FBAD991A9312CB</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F33D2DF36AAA9869A4E3994C10FBAD991A9312CB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PaylevenChallenge</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
