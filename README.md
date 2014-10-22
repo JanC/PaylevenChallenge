@@ -8,7 +8,7 @@ pod install
 open PaylevenTest.xcworkspace
 ```
 ###Authentication
-The Oauth2 is **not** implemented at all. I just use the Box SDK to get the access token that is later used in the implemented network client. So all the UI you see during the authentication is from Box SDK. "My" starts when you see the list of files :)
+The Oauth2 is **not** implemented at all. I just use the Box SDK to get the access token that is later used in the implemented network client. So all the UI you see during the authentication is from Box SDK. _My_ work starts when you see the list of files :)
 
 ###PLBoxAPIClient
 Responsible for fetching the data from the API. 
